@@ -12,17 +12,20 @@
     background: linear-gradient(180deg, var(--lyrics-bg, #243542) 0%, #121212 90%);
     z-index: 150;
     padding: 2.5rem 3.5rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     overflow-y: auto;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(20px);
     transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .spotify-overlay-panel.open {
+    display: flex;
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
 }
@@ -122,16 +125,22 @@
     height: calc(100vh - 90px);
     background-color: #121212;
     border-left: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.7);
+    box-shadow: none;
     z-index: 250;
-    display: flex;
+    display: none;
     flex-direction: column;
     transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .spotify-side-panel.open {
+    display: flex;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.7);
 }
 
 .panel-header {
