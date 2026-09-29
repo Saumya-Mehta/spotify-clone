@@ -14,6 +14,11 @@ const mainContent = document.querySelector(".main-content");
 export function showHomeView() {
     const likedSongsView = document.getElementById("liked-songs-view");
     const libLikedSongsBtn = document.getElementById("lib-liked-songs-btn");
+    const mobHome = document.getElementById("mobile-nav-home");
+    const mobItems = document.querySelectorAll(".mobile-nav-item");
+    if (mobItems.length) mobItems.forEach(m => m.classList.remove("active"));
+    if (mobHome) mobHome.classList.add("active");
+
     if (navHomeBtn) navHomeBtn.classList.add("active");
     if (libLikedSongsBtn) libLikedSongsBtn.classList.remove("active");
     if (homeView) homeView.style.display = "block";
@@ -25,6 +30,11 @@ export function showHomeView() {
 export function showSearchView(focusInput = true) {
     const likedSongsView = document.getElementById("liked-songs-view");
     const libLikedSongsBtn = document.getElementById("lib-liked-songs-btn");
+    const mobSearch = document.getElementById("mobile-nav-search");
+    const mobItems = document.querySelectorAll(".mobile-nav-item");
+    if (mobItems.length) mobItems.forEach(m => m.classList.remove("active"));
+    if (mobSearch) mobSearch.classList.add("active");
+
     if (navHomeBtn) navHomeBtn.classList.remove("active");
     if (libLikedSongsBtn) libLikedSongsBtn.classList.remove("active");
     if (homeView) homeView.style.display = "none";

@@ -99,6 +99,11 @@ export function updateLibrarySidebarCount() {
  * Show Dedicated Liked Songs View
  */
 export function showLikedSongsView() {
+    const mobLib = document.getElementById("mobile-nav-library");
+    const mobItems = document.querySelectorAll(".mobile-nav-item");
+    if (mobItems.length) mobItems.forEach(m => m.classList.remove("active"));
+    if (mobLib) mobLib.classList.add("active");
+
     if (navHomeBtn) navHomeBtn.classList.remove("active");
     if (homeView) homeView.style.display = "none";
     if (searchView) searchView.style.display = "none";

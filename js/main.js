@@ -173,6 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 trackSlider.value = progressPercent;
                 trackSlider.style.setProperty("--progress", `${progressPercent}%`);
             }
+            const mobileProgressFill = document.getElementById("mobile-progress-fill");
+            if (mobileProgressFill) mobileProgressFill.style.width = `${progressPercent}%`;
             if (currentTimeDisplay) currentTimeDisplay.textContent = formatTime(audio.currentTime);
             if (totalTimeDisplay) totalTimeDisplay.textContent = formatTime(audio.duration);
 
@@ -663,6 +665,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // 16. Mobile Bottom Navigation Listeners
+    const mobileNavHome = document.getElementById("mobile-nav-home");
+    const mobileNavSearch = document.getElementById("mobile-nav-search");
+    const mobileNavLibrary = document.getElementById("mobile-nav-library");
+
+    if (mobileNavHome) mobileNavHome.addEventListener("click", () => showHomeView());
+    if (mobileNavSearch) mobileNavSearch.addEventListener("click", () => showSearchView(true));
+    if (mobileNavLibrary) mobileNavLibrary.addEventListener("click", () => showLikedSongsView());
 
     // Load initial track (Daylight) & initialize like state
     loadTrack(0);

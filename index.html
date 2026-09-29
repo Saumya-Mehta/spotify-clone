@@ -407,6 +407,11 @@
             </div> <!-- Close #home-view -->
         </div>
         <div class="music-player">
+            <!-- Mobile Slim Progress Bar -->
+            <div class="mobile-player-progress">
+                <div class="mobile-player-progress-fill" id="mobile-progress-fill"></div>
+            </div>
+
             <!-- Left: Current Song Info -->
             <div class="album">
                 <img src="./assets/album_picture.jpeg" class="album-cover" alt="Daylight" id="current-album-img">
@@ -466,6 +471,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile Bottom Navigation Bar (Shown only on Mobile Screens <= 768px) -->
+    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+        <button class="mobile-nav-item active" id="mobile-nav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </button>
+        <button class="mobile-nav-item" id="mobile-nav-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </button>
+        <button class="mobile-nav-item" id="mobile-nav-library">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <span>Your Library</span>
+        </button>
+    </nav>
 
     <!-- 1. Spotify Lyrics Overlay Panel -->
     <div id="lyrics-view" class="spotify-overlay-panel">
