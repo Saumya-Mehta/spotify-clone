@@ -8,6 +8,8 @@
 
 html {
     font-size: 14px; /* Compact authentic desktop Spotify scale */
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 body {

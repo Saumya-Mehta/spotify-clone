@@ -113,6 +113,8 @@
         flex: 1 !important;
         display: flex !important;
         align-items: center !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
     }
 
     .sticky-nav-icons .nav-circle-btn {
@@ -123,9 +125,11 @@
     .header-search-bar {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
         margin: 0 !important;
         height: 38px !important;
         padding: 4px 12px !important;
+        box-sizing: border-box !important;
     }
 
     #spotify-search-input {
@@ -187,18 +191,32 @@
     /* Section Headers */
     .section-header {
         margin: 18px 0 12px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
     }
 
     .section-header h2 {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .show-all {
+        flex-shrink: 0 !important;
     }
 
     /* --- ALBUM CARDS: 2 COLUMNS ON MOBILE --- */
     .cards-container {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 12px !important;
+        gap: 10px !important;
         margin-bottom: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .card {
