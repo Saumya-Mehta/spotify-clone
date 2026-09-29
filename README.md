@@ -6,7 +6,7 @@ A feature-rich, pixel-accurate web player recreation of Spotify built with **pur
 
 ## 🚀 Live Demo
 
-👉 **[Live Preview Link](https://your-username.github.io/spotify-clone/)** *(Replace with your deployed URL)*
+👉 **[Live Preview Link](https://saumya-mehta.github.io/spotify-clone/)**
 
 ---
 
@@ -104,7 +104,7 @@ SPOTIFY CLONE/
 ### Steps
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/spotify-clone.git
+   git clone https://github.com/Saumya-Mehta/spotify-clone.git
    cd spotify-clone
    ```
 
