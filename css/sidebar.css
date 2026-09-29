@@ -1,0 +1,271 @@
+/* ===================================================
+   SPOTIFY CLONE - SIDEBAR NAVIGATION STYLES
+   =================================================== */
+
+.sidebar {
+    background-color: #000000;
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease;
+}
+
+.sidebar.expanded-width {
+    width: 380px;
+}
+
+.main.sidebar-collapsed {
+    gap: 0;
+}
+
+.main.sidebar-collapsed .sidebar {
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+}
+
+.main.sidebar-collapsed .spotify-overlay-panel {
+    left: 8px;
+}
+
+/* Top Nav Box */
+.nav {
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 18px;
+    gap: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.logo img {
+    height: 22px;
+    width: 22px;
+}
+
+.nav-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-option i {
+    font-size: 1.15rem;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-option a {
+    color: inherit;
+    font-weight: 700;
+}
+
+.nav-option:hover,
+.nav-option.active {
+    color: #ffffff;
+}
+
+/* Library Panel */
+.library {
+    background-color: #121212;
+    border-radius: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 14px;
+    overflow: hidden;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 2px 10px 2px;
+}
+
+.lib-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lib-options img {
+    height: 1.15rem;
+    width: 1.15rem;
+}
+
+.icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icons i {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.icons i:hover {
+    color: #ffffff;
+    background-color: #1f1f1f;
+}
+
+/* Filter Pills */
+.lib-pills {
+    display: flex;
+    gap: 6px;
+    padding: 2px 0 10px 0;
+}
+
+.pill {
+    background-color: #232323;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pill:hover {
+    background-color: #2a2a2a;
+}
+
+/* Scrollable Library Cards */
+.lib-box {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Prompt Cards inside Library */
+.box {
+    background-color: #242424;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.box-p1 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.box-p2 {
+    font-size: 0.78rem;
+    color: #b3b3b3;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Action Badges/Pill Buttons */
+.badge {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.badge:hover {
+    transform: scale(1.04);
+    background-color: #f6f6f6;
+}
+
+.dark-badge {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+}
+
+.dark-badge:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+}
+
+.footer-links a {
+    font-size: 0.68rem;
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #727272;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+}
+
+.lang-btn:hover {
+    border-color: #ffffff;
+    transform: scale(1.04);
+}

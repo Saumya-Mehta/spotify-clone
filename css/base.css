@@ -1,0 +1,53 @@
+/* ===================================================
+   SPOTIFY CLONE - BASE & FOUNDATION STYLES
+   =================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px; /* Compact authentic desktop Spotify scale */
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Master Layout Grid */
+.main {
+    display: flex;
+    height: calc(100vh - 76px);
+    padding: 8px 8px 0 8px;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+/* Slim Spotify Scrollbar System */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

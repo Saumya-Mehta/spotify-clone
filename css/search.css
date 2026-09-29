@@ -1,0 +1,330 @@
+/* ===================================================
+   SPOTIFY CLONE - SEARCH BAR & BROWSE TILES STYLES
+   =================================================== */
+
+/* Header Search Input Bar */
+.header-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 500px;
+    padding: 6px 14px;
+    gap: 10px;
+    width: 320px;
+    max-width: 40vw;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    margin-left: 6px;
+}
+
+.header-search-bar:hover {
+    background-color: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-search-bar:focus-within {
+    border-color: #ffffff;
+    background-color: #242424;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.header-search-bar .search-icon {
+    font-size: 0.88rem;
+    color: #b3b3b3;
+}
+
+#spotify-search-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+#spotify-search-input::placeholder {
+    color: #727272;
+}
+
+.clear-search-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    display: none;
+    font-size: 0.82rem;
+    padding: 2px;
+}
+
+.clear-search-btn:hover {
+    color: #ffffff;
+}
+
+/* Search Page View */
+.search-page-view {
+    padding: 10px 0 40px 0;
+    animation: fadeInView 0.25s ease;
+}
+
+@keyframes fadeInView {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Live Search Results Layout */
+.search-results-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 900px) {
+    .search-results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.top-result-col h3,
+.songs-result-col h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.top-result-card {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.25s ease;
+}
+
+.top-result-card:hover {
+    background-color: #282828;
+}
+
+.top-result-card img {
+    width: 92px;
+    height: 92px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.top-result-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 4px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-result-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #b3b3b3;
+}
+
+.top-result-tag {
+    background-color: #121212;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 500px;
+}
+
+.top-result-play-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1ed760;
+    color: #000000;
+    border: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+}
+
+.top-result-card:hover .top-result-play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.top-result-play-btn:hover {
+    transform: scale(1.08) !important;
+    background-color: #1fdf64;
+}
+
+/* Songs Results List */
+.songs-result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.search-song-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.search-song-row:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.search-song-row img {
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.search-song-info {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.search-song-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-song-artist {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-song-duration {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.top-result-play-btn.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.search-song-row.playing .search-song-title {
+    color: #1ed760;
+    font-weight: 700;
+}
+
+.search-song-row.playing .search-song-artist {
+    color: #1ed760;
+}
+
+.no-search-results {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 540px;
+    margin: 30px auto 0 auto;
+}
+
+.no-search-results h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.no-search-results p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+}
+
+.no-search-results em {
+    color: #1ed760;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Browse All Tiles Grid */
+.browse-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 18px;
+}
+
+.browse-tile {
+    height: 180px;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.browse-tile:hover {
+    transform: scale(1.03);
+    filter: brightness(1.08);
+}
+
+.browse-tile span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    word-break: break-word;
+    max-width: 75%;
+    display: block;
+    line-height: 1.15;
+}
+
+.browse-tile img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    transform: rotate(25deg) translate(18%, -2%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Spotify Browse Tile Signature Gradients */
+.tile-pop { background-color: #8c1932; }
+.tile-bollywood { background-color: #ba5d07; }
+.tile-indie { background-color: #477d95; }
+.tile-charts { background-color: #1e3264; }
+.tile-rock { background-color: #e91429; }
+.tile-party { background-color: #537aa1; }
+.tile-punjabi { background-color: #af2896; }
+.tile-chill { background-color: #27856a; }

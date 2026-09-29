@@ -1,0 +1,442 @@
+/* ===================================================
+   SPOTIFY CLONE - LIBRARY & LIKED SONGS STYLES
+   =================================================== */
+
+/* Sidebar Library List Item */
+.library-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.library-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.library-item.active {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.liked-songs-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #450af5 0%, #8e8ee5 50%, #c4efd9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.playlist-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.lib-item-info {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lib-item-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lib-item-sub {
+    font-size: 0.72rem;
+    color: #b3b3b3;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pin-icon {
+    color: #1ed760;
+    font-size: 0.68rem;
+    transform: rotate(45deg);
+}
+
+/* Liked Songs Dedicated Page View */
+.liked-songs-page-view {
+    padding-bottom: 60px;
+    animation: fadeInView 0.25s ease;
+}
+
+/* Giant Playlist Hero Header Banner */
+.playlist-hero {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 24px 0 24px 0;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, rgba(80, 56, 160, 0.6) 0%, transparent 100%);
+    border-radius: 8px;
+    padding-left: 12px;
+}
+
+.playlist-cover-art {
+    width: 192px;
+    height: 192px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.liked-cover-gradient {
+    background: linear-gradient(135deg, #450af5 0%, #8e8ee5 50%, #c4efd9 100%);
+    color: #ffffff;
+    font-size: 4.5rem;
+}
+
+.playlist-hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.playlist-type {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.playlist-hero-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+@media(max-width: 900px) {
+    .playlist-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .playlist-cover-art {
+        width: 140px;
+        height: 140px;
+    }
+    .playlist-hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+.playlist-hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.meta-author {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.meta-bullet {
+    color: #b3b3b3;
+}
+
+/* Playlist Action Bar */
+.playlist-action-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0 24px 0;
+}
+
+.playlist-play-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #1ed760;
+    color: #000000;
+    border: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.15s;
+}
+
+.playlist-play-btn i {
+    margin-left: 3px;
+}
+
+.playlist-play-btn:hover {
+    transform: scale(1.06);
+    background-color: #1fdf64;
+}
+
+.playlist-icon-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: color 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist-icon-btn:hover {
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.playlist-filter-box {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 500px;
+    padding: 6px 14px;
+    gap: 8px;
+    width: 220px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.playlist-filter-box:focus-within {
+    background-color: #242424;
+    border-color: #ffffff;
+}
+
+.playlist-filter-box i {
+    color: #b3b3b3;
+    font-size: 0.82rem;
+}
+
+.playlist-filter-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+.playlist-filter-box input::placeholder {
+    color: #727272;
+}
+
+/* Track Table */
+.track-table-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.track-table-header {
+    display: grid;
+    grid-template-columns: 36px 4fr 3fr 2fr 40px 60px;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b3b3b3;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.track-table-row {
+    display: grid;
+    grid-template-columns: 36px 4fr 3fr 2fr 40px 60px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.track-table-row:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.track-table-row.playing {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.track-table-row.playing .row-song-title {
+    color: #1ed760;
+}
+
+.row-index {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+.row-play-icon {
+    display: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.track-table-row:hover .row-index-num {
+    display: none;
+}
+
+.track-table-row:hover .row-play-icon {
+    display: inline-block;
+}
+
+.row-title-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    padding-right: 12px;
+}
+
+.row-cover-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.row-title-meta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 2px;
+}
+
+.row-song-title {
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+}
+
+.row-song-artist {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row-album-cell,
+.row-date-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    color: #b3b3b3;
+    padding-right: 10px;
+}
+
+.row-heart-btn {
+    background: none;
+    border: none;
+    color: #1ed760;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: transform 0.15s, color 0.15s;
+}
+
+.row-heart-btn:hover {
+    transform: scale(1.15);
+    color: #ffffff;
+}
+
+.row-duration-cell {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Empty State */
+.empty-liked-state {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+}
+
+.empty-liked-state i {
+    font-size: 4rem;
+    color: #727272;
+    margin-bottom: 20px;
+}
+
+.empty-liked-state h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.empty-liked-state p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.empty-liked-state .badge {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.empty-liked-state .badge:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
