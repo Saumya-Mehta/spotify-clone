@@ -5,11 +5,16 @@
 .main-content {
     background: linear-gradient(180deg, var(--ambient-glow, #1f3a2b) 0%, #121212 360px);
     flex: 1;
-    height: 100%;
     border-radius: 8px;
-    overflow-y: auto;
     padding: 0 1.25rem 1.25rem 1.25rem;
     transition: background 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (min-width: 769px) {
+    .main-content {
+        height: 100%;
+        overflow-y: auto;
+    }
 }
 
 /* Sticky Nav Bar */

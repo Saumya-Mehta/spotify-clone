@@ -3,12 +3,12 @@
    Imports all modular stylesheets cleanly
    =================================================== */
 
-@import url("./css/base.css");
-@import url("./css/sidebar.css");
-@import url("./css/main-content.css");
-@import url("./css/player.css");
-@import url("./css/overlays.css");
-@import url("./css/search.css");
-@import url("./css/library.css");
-@import url("./css/modals.css");
-@import url("./css/responsive.css");
+@import url("./css/base.css?v=5");
+@import url("./css/sidebar.css?v=5");
+@import url("./css/main-content.css?v=5");
+@import url("./css/player.css?v=5");
+@import url("./css/overlays.css?v=5");
+@import url("./css/search.css?v=5");
+@import url("./css/library.css?v=5");
+@import url("./css/modals.css?v=5");
+@import url("./css/responsive.css?v=5");

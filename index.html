@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./assets/logo.png">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="theme-color" content="#121212">
+    <link rel="stylesheet" href="./style.css?v=5">
+    <link rel="stylesheet" href="./css/responsive.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -405,8 +407,11 @@
                 </div>
             </div>
             </div> <!-- Close #home-view -->
-        </div>
-        <div class="music-player">
+        </div> <!-- Close .main-content -->
+    </div> <!-- Close .main -->
+
+    <!-- Bottom Music Player -->
+    <div class="music-player">
             <!-- Mobile Slim Progress Bar -->
             <div class="mobile-player-progress">
                 <div class="mobile-player-progress-fill" id="mobile-progress-fill"></div>
@@ -470,7 +475,6 @@
                 <button class="ctrl-btn" title="Full screen" id="fullscreen-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
             </div>
         </div>
-    </div>
 
     <!-- Mobile Bottom Navigation Bar (Shown only on Mobile Screens <= 768px) -->
     <nav class="mobile-bottom-nav" id="mobile-bottom-nav">

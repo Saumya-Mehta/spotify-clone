@@ -14,9 +14,17 @@ body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #121212;
     color: #ffffff;
-    overflow: hidden;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 769px) {
+    body {
+        background-color: #000000;
+        overflow: hidden;
+    }
 }
 
 a {
@@ -27,10 +35,21 @@ a {
 /* Master Layout Grid */
 .main {
     display: flex;
-    height: calc(100vh - 76px);
-    padding: 8px 8px 0 8px;
-    gap: 8px;
-    transition: gap 0.3s ease;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    gap: 0;
+}
+
+@media (min-width: 769px) {
+    .main {
+        flex-direction: row;
+        height: calc(100vh - 76px);
+        min-height: 0;
+        padding: 8px 8px 0 8px;
+        gap: 8px;
+        transition: gap 0.3s ease;
+    }
 }
 
 /* Slim Spotify Scrollbar System */
