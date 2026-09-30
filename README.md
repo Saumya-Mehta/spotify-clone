@@ -6,7 +6,7 @@ A feature-rich, pixel-accurate web player recreation of Spotify built with **pur
 
 ## 🚀 Live Demo
 
-👉 **[Live Preview Link](https://saumya-mehta.github.io/spotify-clone/)**
+👉 **[Live Preview Link](https://spotify-clone-sable-tau.vercel.app/)**
 
 ---
 
